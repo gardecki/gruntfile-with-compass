@@ -1,0 +1,28 @@
+@import "sprites";
+@import "compass/css3/transition";
+
+$bg-color: #697b67;
+
+body {
+	background: $bg-color;
+} 
+
+.content {
+	background: white;
+	text-align: center;	
+	.center {
+		display: table;
+		margin:auto;
+	}
+} 
+
+.row-centered {
+	text-align:center;
+}
+.col-centered {
+	display:inline-block;
+	float:none;
+	margin-right:-4px;
+}
+
+

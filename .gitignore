@@ -3,3 +3,4 @@ bower_components
 node_components
 .sass-cahce
 temp
+.DS_Store
