@@ -3,6 +3,7 @@ This is my basic initial "frontend seed" with npm, bower and grunt files.
 
 ## General Requirements
 First of all you have to install few things:
+
 1. [node](https://docs.npmjs.com/getting-started/installing-node)
 2. [bower](http://bower.io/#install-bower)
 3. [grunt](http://gruntjs.com/installing-grunt)
