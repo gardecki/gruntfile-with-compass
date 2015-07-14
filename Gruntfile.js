@@ -7,10 +7,10 @@ grunt.initConfig({
 	// Task configuration.
 	clean: {
 		build: {
-			src: ["build", "images"]
+			src: ["build", "temp"]
 		},
-		temp: {
-			src: ["temp"]
+		sprites: {
+			src: ["app/images/sprites/*.png"]	
 		}
 	},
 	
@@ -51,7 +51,7 @@ grunt.initConfig({
 				httpGeneratedImagesPath: "./images/",
 				noLineComments: true
 			},
-		}
+		}		
 	},
 
 	connect: {
@@ -125,11 +125,15 @@ grunt.initConfig({
 		},
 		scss: { 
 			files: 'app/styles/**/*.scss',
-			tasks: ['compass', 'concat:css']
+			tasks: ['compass', 'concat:css', 'sync:images']
 		},
 		html: {
 			files: ['app/**/*.html'],
 			tasks: ['sync:html']
+		},
+		sprites: {
+			files: ['app/images/sprites/**/*.png'],
+			tasks: ['compass', 'concat:css', 'sync:images']
 		}
 	}
 	
@@ -137,7 +141,6 @@ grunt.initConfig({
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -149,5 +152,5 @@ grunt.initConfig({
 
   // Default task.
   grunt.registerTask('default', ['build', 'connect:livereload', 'open', 'watch']);
-  grunt.registerTask('build', [ 'clean:build', 'clean:temp', 'compass:dev', 'sync', 'bower_concat', 'concat' ]);
+	grunt.registerTask('build', [ 'clean:build', 'compass', 'sync', 'clean:sprites', 'bower_concat', 'concat' ]);
 };

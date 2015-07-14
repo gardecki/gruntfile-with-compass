@@ -1,20 +1,42 @@
 @import "sprites";
 @import "compass/css3/transition";
 
-$bg-color: #697b67;
+$bg-color: #44516c;
 
 body {
 	background: $bg-color;
+	color: white;
+	font-family: monoscope; 
 } 
 
 .content {
-	background: white;
 	text-align: center;	
 	.center {
 		display: table;
 		margin:auto;
-	}
-} 
+	} 
+	background: lighten($bg-color, 10%);
+}  
+
+.inline-block {
+	display: inline-block;
+}
+
+.center {
+	background: white;
+	padding:15px;
+}
+
+.col {
+	margin-bottom: 10px;
+}
+
+.title {
+	border-bottom: 1px solid white;
+	text-transform: uppercase;
+	padding-bottom:20px;
+	margin-bottom: 20px;
+}
 
 .row-centered {
 	text-align:center;

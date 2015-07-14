@@ -1,5 +1,5 @@
 myApp.controller('spritesCtrl', ['$scope', function($scope) {
 
-    $scope.sprites = [ 'clock', 'document', 'mobile', 'out', 'thumbs', 'search'];		
+    $scope.sprites = [ 'camera', 'document', 'mobile', 'out', 'thumbs', 'search', 'clock', 'smile'];		
 
 }]);
