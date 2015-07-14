@@ -10,5 +10,8 @@ First of all you have to install few things:
 4. You also have to install <a href="http://thesassway.com/beginner/getting-started-with-sass-and-compass" target="_blank">compass</a> in order to run grunt-contrib-compass task used in this gruntfile.  
 <hr>
 
-##How it works?
+## 2. How it works?
+1. npm install
+2. bower install
+3. grunt
 
